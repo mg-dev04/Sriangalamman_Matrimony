@@ -159,16 +159,55 @@
 
 
 .carousel_search{
-    height:135px;
-    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+    max-height:135px;
+    width: 90%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top:350px;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.616);
+    gap:20px;
 }
-
+.carousel_search_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+.carousel_search_items button{
+    margin-top: 35px;
+    height: 55px;
+    width: 160px;
+    background: linear-gradient(to right, #ffc118, #c30332);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.carousel_search_items button:hover{
+    cursor: pointer;
+    background: black;
+    box-shadow: #4f4f4f;
+}
+.carousel_search_items h3{
+    font-size: 15px;
+    font-weight: 100;
+}
+.carousel_search_items select{
+    height: 40px;
+    width: 180px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+    font-size: 15px;
+}
 
 .footer{
     display: flex;

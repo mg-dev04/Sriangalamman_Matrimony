@@ -7,6 +7,12 @@ import logo from './Assets/logo.png';
 function Home() {
     function About_dropdown(){
         var dropdown=document.querySelector('.dropdown');
+        var home = document.querySelector('.home');
+        home.addEventListener('click',()=>{
+            if(dropdown.style.display==='block')
+                dropdown.style.display='none';
+                home.removeEventListener('click',this);
+            })
         if(dropdown.style.display==='none' || dropdown.style.display===''){
             dropdown.style.display='block';
         }
@@ -16,10 +22,15 @@ function Home() {
     }
 
 
+    const range = (start, end, step = 1) => {
+    const length = Math.floor((end - start) / step) + 1;
+    return Array.from({ length }, (_, i) => start + i * step);
+    };
+
 
 
     return(
-        <div>
+        <div className="home">
             <div className="header">
                 <div className="logo">
                     <img src={logo} alt="logo"/>
@@ -115,10 +126,67 @@ function Home() {
 
             <div className="carousel"><div></div></div>
 
-            <div className="carousel_search">
-                
-            </div>
+            <div className="carousel_search" style={{marginLeft:'100px',marginRight:'100px'}}>
+                <div className="carousel_search_items">
+                    <h3>I'm looking for a</h3>
+                    <select>
+                        <option>Bride</option>
+                        <option>Groom</option>
+                    </select>
+                </div>
+                <div className="carousel_search_items">
+                    <h3>From Age</h3>
+                    <select defaultValue={20}>
+                        {range(18, 65, 1).map(num => (
+                            <option key={num} value={num}>
+                                {num}
+                            </option>
+                            ))}
 
+                    </select>
+                </div>
+                <div className="carousel_search_items">
+                    <h3>To Age</h3>
+                    <select defaultValue={28}>
+                        {range(18, 65, 1).map(num => (
+                            <option key={num} value={num}>
+                                {num}
+                            </option>
+                            ))}
+                    </select>
+                </div>
+                <div className="carousel_search_items">
+                    <h3>of religion</h3>
+                    <select defaultValue={'Any'}>
+                        <option>Any</option>
+                        <option>Hindu</option>
+                        <option>Muslim</option>
+                        <option>Christan</option>
+                        <option>sikh</option>
+                        <option>Budhism</option>
+                        <option>Jain</option>
+                        <option>Bhramin</option>
+                    </select>
+                </div>
+                <div className="carousel_search_items">
+                    <h3>and caste</h3>
+                    <select>
+                        <option>Any</option>
+                        <option>Devar</option>
+                        <option>Bhramin</option>
+                        <option>Gounder</option>
+                        <option>Nadar</option>
+                        <option>Nayakar</option>
+                        <option>Pillai</option>
+                        <option>Viswagarma</option>
+                        <option>Chettiyar</option>
+                        <option>Mudaliar</option>
+                    </select>
+                </div>
+                <div className="carousel_search_items">
+                    <button>Search Partner</button>
+                </div>
+            </div>
 
 
             <div className="welcome"></div>
