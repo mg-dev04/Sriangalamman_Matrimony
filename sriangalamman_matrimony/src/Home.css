@@ -1,0 +1,37 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.headercontact h3{
+    color: #c30332;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.headercontact h2{
+    color: #777777;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.headerbuttons{
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.headerbuttons button{
+    background-color: #fc821e;
+    color: white;
+    border: none;
+    height: 40px ;
+    width: 120px   ;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
