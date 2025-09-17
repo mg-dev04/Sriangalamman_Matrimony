@@ -39,7 +39,7 @@ function Home() {
                     <div className="env">
                         <i class="far fa-envelope-open text-center mr-md-4 mr-sm-2 mr-8"></i>
                     </div>
-                    <div>
+                    <div className="info">
                         <h3>+919443946541</h3>
                         <h2>info@sriangalammanmatrimony.com</h2>
                     </div>
@@ -92,6 +92,7 @@ function Home() {
                             
                     
                     </div>
+                    
                     
                     
                 </div>
