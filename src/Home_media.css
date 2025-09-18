@@ -60,7 +60,6 @@
 }
 
 
-<<<<<<< HEAD:src/Home_media.css
 .navbar ,.navitems{
     display: none;
 }
@@ -68,11 +67,6 @@
 
 .second-navbar{
     display: none;
-=======
-
-.navbar{
-    display: flex;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
@@ -82,11 +76,7 @@
     justify-content: center ;
     align-items: center;
     color: white;
-<<<<<<< HEAD:src/Home_media.css
     height: 600px;
-=======
-    height: 50px;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     flex-wrap: wrap;
     flex-grow: 1;
     gap: 1%;
@@ -94,11 +84,7 @@
 }
 .dropdown{
     display: none;
-<<<<<<< HEAD:src/Home_media.css
     position:relative;
-=======
-    position:absolute;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     background-color: white;
     color:#222222;
     border-radius: 3px;
@@ -106,11 +92,7 @@
     top:45px;
 }
 .dropdown div{
-<<<<<<< HEAD:src/Home_media.css
     display: flex ;
-=======
-    display: flex;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -130,11 +112,7 @@
     color: rgba(128, 128, 128, 0.527);
     
 }
-<<<<<<< HEAD:src/Home_media.css
 .second-navbar .second-navitems{
-=======
-.navbar .navitems{
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -147,7 +125,6 @@
     gap: 2px;
     
 }
-<<<<<<< HEAD:src/Home_media.css
 .second-navbar .second-navitems:hover{
     color: black;
 }
@@ -158,18 +135,6 @@
     color: black;
 }
 .second-navbar .second-navitems h4{
-=======
-.navbar .navitems:hover{
-    color: black;
-}
-.navbar .navitems i{
-    font-size: 15px;
-}
-.navbar .navitems:active{
-    color: black;
-}
-.navbar .navitems h4{
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     margin: 0;
     padding: 0; 
     font-weight: 400;
@@ -289,13 +254,8 @@
 .welcome .img{
     align-self: flex-end;
 }
-<<<<<<< HEAD:src/Home_media.css
 .welcome .img img{
     width: 300px;
-=======
-.welcome img{
-    min-width: auto;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
 }
 .profiles{
     position: absolute;
@@ -332,7 +292,6 @@
 .profiles b{
     font-weight: 700;
 }
-<<<<<<< HEAD:src/Home_media.css
 .profiles .row{
     width: 60%;
     display: flex;
@@ -346,9 +305,6 @@
     transform: translate3d(0,0,0);
     gap:50px;
 }
-=======
-
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
 
 }
 
@@ -438,11 +394,7 @@
 #bar:hover{
         cursor: pointer;
 }
-<<<<<<< HEAD:src/Home_media.css
 .second-navbar{
-=======
-.navbar{
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     display: display;
     justify-content: space-evenly;
     flex-direction: column;
@@ -487,11 +439,7 @@
     color: rgba(128, 128, 128, 0.527);
     
 }
-<<<<<<< HEAD:src/Home_media.css
 .second-navbar .second-navitems{
-=======
-.navbar .navitems{
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -504,7 +452,6 @@
     gap: 5px;
     
 }
-<<<<<<< HEAD:src/Home_media.css
 .second-navbar .second-navitems:hover{
     color: black;
 }
@@ -515,18 +462,6 @@
     color: black;
 }
 .second-navbar .second-navitems h4{
-=======
-.navbar .navitems:hover{
-    color: black;
-}
-.navbar .navitems i{
-    font-size: 15px;
-}
-.navbar .navitems:active{
-    color: black;
-}
-.navbar .navitems h4{
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     margin: 0;
     padding: 0; 
     font-weight: 400;
@@ -649,14 +584,8 @@
     flex-wrap: wrap;
     
 }
-<<<<<<< HEAD:src/Home_media.css
 .welcome .img img{
     width: 240px;
-=======
-.welcome img{
-    width: auto;
-    height: auto;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home_media.css
     padding-left: 0 20px 0 20px ;
 }
 .profiles{

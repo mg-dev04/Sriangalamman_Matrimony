@@ -246,11 +246,7 @@
 .profiles{
     position: absolute;
     width: 100%;
-<<<<<<< HEAD:src/Home.css
     padding-top: 50px;
-=======
-    padding: 50px;
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home.css
     background-color: white;
     justify-content: center;
     align-items: center;
@@ -277,17 +273,13 @@
 .profiles .underline{
     width: 180px;
     align-self: center;
-<<<<<<< HEAD:src/Home.css
     padding-bottom: 20px;
-=======
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home.css
     justify-self: center;
 }
 .profiles b{
     font-weight: 700;
 }
 
-<<<<<<< HEAD:src/Home.css
 .profiles .row{
     width: 60%;
     display: flex;
@@ -327,8 +319,6 @@
     color: #c30332;
 }
 
-=======
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home.css
 .footer{
     display: flex;
     flex-direction: row;
@@ -339,9 +329,6 @@
     flex-wrap: wrap;
     height: 2000px;
 }
-<<<<<<< HEAD:src/Home.css
 
 
 
-=======
->>>>>>> a70f636401593fe2e1cced995609bc41de531260:sriangalamman_matrimony/src/Home.css
