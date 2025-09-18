@@ -1,7 +1,11 @@
 import React from "react";
 import './Home.css';
+import './Home_media.css'
 import logo from './Assets/logo.png';
+import welcome from './Assets/welcome.png';
+import underline from './Assets/underline.png'
 import { useState } from "react";
+
 
 
 
@@ -191,9 +195,22 @@ function Home() {
 
 
             <div className="welcome">
-                    <div></div>
+                    <div className="text">
+                        <h1>Welcome to Sriangalamman Matrimony</h1>
+                        <p><b>Sriangalamman Matrimony,</b> is one of India’s leading online premium matrimonial websites which will help thousands of all Community members find their perfect life partner. <br /><p></p>Sriangalamman Matrimony  is the most trusted matrimony service for thousands who are in search of life partners in India & Worldwide.</p>
+                        <p style={{display:'inline'}}>...<p style={{color:'#489bffff',display:'inline'}}>Read More</p></p>
+                    </div>
+                    <div className="img">
+                        <img src={welcome}/>
+                    </div>
             </div>
-            <div className="profiles"></div>
+            <div className="profiles">
+                <div className="p-text">
+                    <h3 id="h3">Brides & Grooms <b>Profiles</b> </h3>
+                    <img className="underline" src={underline}/>
+                </div>
+                <div></div>
+            </div>
             <div className="features"></div>
             <div className="success"></div>
             <div className="footer"></div>
