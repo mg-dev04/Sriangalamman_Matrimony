@@ -1,8 +1,10 @@
 *{
     font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
+    overflow-x: hidden;
 }
 .header{
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,7 +13,6 @@
     padding-right: 10%;
     padding-left: 14%;
     flex-wrap: wrap;
-    gap: 100px;
 }
 .logo{
     justify-self: flex-start;
@@ -32,18 +33,15 @@
 .headercontact h3{
     color: #c30332;
     font-size: 16px;
-    margin-top: 20px;
 }
 .headercontact h2{
     color: #777777;
     font-size: 15px;
     font-weight: 400;
-    margin-top: 10px;
 }
 .headerbuttons{
     display: flex ;
     flex-direction: row;
-    margin-left: 50px;
     align-items: center;
     gap: 20px;
 }
@@ -53,16 +51,19 @@
     border: none;
     height: 40px ;
     width: 120px   ;
-    padding: 10px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
 
-
+.Tab-nav{
+    display: none;
+}
 
 .navbar{
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     position: sticky;
     top: 0;
@@ -70,21 +71,23 @@
     justify-content: center ;
     align-items: center;
     color: white;
-    
-    height: 50px;
+    max-height: 50px;
     flex-wrap: wrap;
-    flex-shrink: 1;
-    gap: 30px;
-    
+    flex-grow: 1;
+    gap: 1.5%;
+    overflow-x:visible;
+    z-index: 0;    
 }
 .dropdown{
     display: none;
     position:absolute;
+    z-index: 2 !important;
     background-color: white;
     color:#222222;
     border-radius: 3px;
     width: 220px;
     top:45px;
+    
 }
 .dropdown div{
     display: flex;
@@ -161,17 +164,19 @@
 .carousel_search{
     display: flex;
     flex-direction: row;
+    position: relative;
     align-items:center;
     justify-content: center;
-    padding: 20px 0px 20px 0px;
-    max-height:135px;
-    width: 90%;
-    margin-left: 10%;
+    padding: 20px 4% 20px 4%;
+    min-height:135px;
+    width: 80%;
+    margin-left: 10% !important;
     margin-right: 10%;
     margin-top:350px;
     margin-bottom: 180px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.616);
+    flex-wrap: wrap;
     gap:20px;
 }
 .carousel_search_items{
@@ -209,6 +214,111 @@
     font-size: 15px;
 }
 
+
+.welcome{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 10% 25px 14%;
+    background-color: white;
+    gap: 50px;
+}
+.welcome .text{
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    width: 62%;
+}
+.welcome .text h1{
+    text-align: right;
+    color: #c30332;
+    letter-spacing: 0.1px;
+    font-size: 34px;
+    font-weight: 700;
+}
+.welcome .text p{
+        font-family: Verdana,Geneva,sans-serif;
+        font-size: 14px;
+        line-height: 25px;
+}
+.welcome img{
+    width: 320px;
+}
+.profiles{
+    position: absolute;
+    width: 100%;
+    padding-top: 50px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+.p-text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap:0;
+}
+.profiles h3{
+    font-weight: 100;
+    font-size: 46px;
+    padding: 0;
+    margin: 0;
+    color: #c30332;
+    font-style: normal;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+.profiles .underline{
+    width: 180px;
+    align-self: center;
+    padding-bottom: 20px;
+    justify-self: center;
+}
+.profiles b{
+    font-weight: 700;
+}
+
+.profiles .row{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    scrollbar-width: none; 
+    font-family: sans-serif;
+    font-weight:lighter;
+    font-size: 15px;   
+    margin: 40px 20% 0 20%;
+    overflow-x: hidden;
+    transform: translate3d(0,0,0);
+    gap:50px;
+}
+.profiles .column{
+    display: flex;
+    flex-direction: column;
+    min-width: 16vw;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1vh;
+    animation: scroll-left 5s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.profiles .column img{
+    width: 14vw;
+    border-radius: 50%;
+}
+.profiles .column span{
+    color: #c30332;
+}
+
 .footer{
     display: flex;
     flex-direction: row;
@@ -219,3 +329,6 @@
     flex-wrap: wrap;
     height: 2000px;
 }
+
+
+
