@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "sriangalamman_matrimony",
   "version": "0.1.0",
   "private": true,
@@ -37,3 +38,9 @@
     ]
   }
 }
+=======
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
+>>>>>>> a70f636401593fe2e1cced995609bc41de531260
