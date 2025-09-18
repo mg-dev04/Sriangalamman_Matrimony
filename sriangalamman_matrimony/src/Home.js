@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css';
 import logo from './Assets/logo.png';
+import { useState } from "react";
 
 
 
@@ -39,7 +40,7 @@ function Home() {
                     <div className="env">
                         <i class="far fa-envelope-open text-center mr-md-4 mr-sm-2 mr-8"></i>
                     </div>
-                    <div className="info">
+                    <div>
                         <h3>+919443946541</h3>
                         <h2>info@sriangalammanmatrimony.com</h2>
                     </div>
@@ -49,6 +50,10 @@ function Home() {
                     <button>Register</button>
                 </div>
             </div>
+            <div className="Tab-nav">
+                <i id="bar" class="fa-solid fa-bars"></i>            
+            </div>
+
             <div className="navbar">
                 <div className="navitems">
                     <i class="fa fa-home" aria-hidden="true"></i>
@@ -58,42 +63,37 @@ function Home() {
                 <div className="navitems">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <h4 onClick={About_dropdown}>About Us</h4>
-                     <div className="dropdown">
-                        
-                            <div>
-                                <i class="fa fa-retweet"></i>
-                                <h4>FAQs</h4>
-                            </div> 
-                            <div>
-                                <i class="fa fa-check"></i>
-                                <h4>Terms & Conditions</h4>
-                            </div> 
-                            <div>
-                                <i class="fa fa-user-secret"></i>
-                                <h4>Privacy Policy</h4>
-                            </div> 
-                            <div>
-                                <i class="fa fa-credit-card"></i>
-                                <h4>Refund Policy </h4>
-                            </div> 
-                            <div>
-                                <i class="fa fa-exclamation-triangle"></i>
-                                <h4>Disclaimer</h4>
-                            </div> 
-                            <div>
-                                <i class="fa fa-ban"></i>
-                                <h4>Report Misuse</h4>
-                            </div> 
+                    <div className="dropdown">
+                        <div>
+                            <i class="fa fa-retweet"></i>
+                            <h4>FAQs</h4>
+                        </div> 
+                        <div>
+                            <i class="fa fa-check"></i>
+                            <h4>Terms & Conditions</h4>
+                        </div> 
+                        <div>
+                            <i class="fa fa-user-secret"></i>
+                            <h4>Privacy Policy</h4>
+                        </div> 
+                        <div>
+                            <i class="fa fa-credit-card"></i>
+                            <h4>Refund Policy </h4>
+                        </div> 
+                        <div>
+                            <i class="fa fa-exclamation-triangle"></i>
+                            <h4>Disclaimer</h4>
+                        </div> 
+                        <div>
+                            <i class="fa fa-ban"></i>
+                            <h4>Report Misuse</h4>
+                        </div> 
                             <hr/>
-                            <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
-                                <i class="fa fa-user"></i>
-                                <h4> About Us</h4>
-                            </div>
-                            
-                    
+                        <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
+                            <i class="fa fa-user"></i>
+                            <h4> About Us</h4>
+                        </div>     
                     </div>
-                    
-                    
                     
                 </div>
                 <p>|</p>
@@ -121,9 +121,9 @@ function Home() {
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <h4>Contact Us</h4>
                 </div>
-               
-
             </div>
+            
+            
 
             <div className="carousel"><div></div></div>
 
@@ -190,7 +190,9 @@ function Home() {
             </div>
 
 
-            <div className="welcome"></div>
+            <div className="welcome">
+                    <div></div>
+            </div>
             <div className="profiles"></div>
             <div className="features"></div>
             <div className="success"></div>
