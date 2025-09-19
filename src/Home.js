@@ -1,18 +1,23 @@
-import React, { useEffect } from "react";
 import './Home.css';
 import './Home_media.css'
 import logo from './Assets/logo.png';
 import welcome from './Assets/welcome.png';
 import underline from './Assets/underline.png'
+import success from './Assets/success.jpeg'
+import info from './Assets/info.png'
 import p1 from './Assets/p1.jpg'
-import { useState } from "react";
+import backToTop from './Assets/backToTop.png'
+import footerimg from './Assets/footerimage.jpeg'
+import { useState,useEffect } from "react";
 
 
 
 function Home() {
     const [dropdown,setdrop] = useState(false);
-    const [menu , setmenu] = useState(false)
-    const [active, setactive] = useState(1)
+    const [menu , setmenu] = useState(false);
+    const [active, setactive] = useState(1);
+    const [readmore,setreadmore] = useState('Read more')
+    const [scroll,setscroll] = useState(true)
 
     function About_dropdown(){
 
@@ -34,6 +39,38 @@ function Home() {
         }
     }
 
+
+    function Read(){
+        if(readmore === "Read more"){
+            setreadmore("Read less")
+        }
+        else{
+            setreadmore("Read more")
+        }
+    }
+      const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setscroll(true);
+      console.log("scroll",scroll)
+    } else {
+      setscroll(true);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
 
     
 
@@ -210,7 +247,7 @@ function Home() {
                 </div>
             </div>
             
-            
+            <img className='backToTop' alt='' style={{display: scroll ? 'block' : 'none'}} src={backToTop}/>
 
             <div className="carousel"><div ></div></div>
 
@@ -284,14 +321,15 @@ function Home() {
                         <p style={{display:'inline'}}>...<p style={{color:'#489bffff',display:'inline'}}>Read More</p></p>
                     </div>
                     <div className="img">
-                        <img src={welcome}/>
+                        <img alt="welcome" src={welcome}/>
                     </div>
                     
             </div>
+            
             <div className="profiles">
                 <div className="p-text">
                     <h3 id="h3">Brides & Grooms <b>Profiles</b> </h3>
-                    <img className="underline" src={underline}/>
+                    <img alt="" className="underline" src={underline}/>
                 </div>
                 <div className="row">
                         <div className="column">
@@ -348,11 +386,137 @@ function Home() {
                             <h4>Designer</h4>
                         </div>
                     </div>
-                <div></div>
             </div>
-            <div className="features"></div>
-            <div className="success"></div>
-            <div className="footer"></div>
+
+            
+            <div className="features">
+                <div className="f-text">
+                    <p id="h3">Features & <b>Policy</b> </p>
+                    <img alt="" className="underline" src={underline}/>
+                </div>
+                <div className='row1'>
+                    <div className='row'>
+                            <div className='column'>
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div className='column1'>
+                                <h1 id="zero" style={{padding:'0',margin:'0'}}>Free SMS & Chat</h1>
+                                <p id="zero">
+                                    An important facility such as chat is available in our site, so that people can interact with each other.
+                                </p>
+                            </div>
+                        </div><div className='row'>
+                            <div className='column'>
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div className='column1'>
+                                <h1 id="zero" style={{padding:'0',margin:'0'}}>Auto Match Maker</h1>
+                                <p id="zero">
+                                    Some new members get registered daily. This matrimony system updates and shows you matched profile.                                </p>
+                            </div>
+                        </div><div className='row'>
+                            <div className='column'>
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div className='column1'>
+                                <h1 id="zero" style={{padding:'0',margin:'0'}}>Recommend Profile</h1>
+                                <p id="zero" >
+                                    when you follow some-one, you can see the updates of people whom you follow.                                </p>
+                            </div>
+                        </div>
+                </div><div className='row1'>
+                    <div className='row'>
+                            <div className='column'>
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <div className='column1'>
+                                <h1 id="zero" style={{padding:'0',margin:'0'}}>Notification Alerts </h1>
+                                <p id="zero" >
+                                    The activities such as changing the display picture, birthday notification, photo requests.
+                                </p>
+                            </div>
+                        </div><div className='row'>
+                            <div className='column'>
+                                <i class="fa fa-cog"></i>
+                            </div>
+                            <div className='column1'>
+                                <h1 id="zero" style={{padding:'0',margin:'0'}}>Restrictions Setting</h1>
+                                <p id="zero">
+                                        Restrictions Enable Copying Photos & Video Disable Anti Spam System Provided.                                </p>
+                            </div>
+                        </div><div className='row'>
+                            <div className='column'>
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div className='column1'>
+                                <h1 id="zero" style={{padding:'0',margin:'0'}}>Privacy Policy</h1>
+                                <p id="zero">
+                                        This electronic website is being operated and owned by sriangalammanmatrimony.com                                </p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <div className="success">
+                <div className="p-text">
+                    <h3 id="h3">Success<b style={{fontWeight:'600'}}> Stories</b> </h3>
+                    <img alt="" className="underline" src={underline}/>
+                </div>
+                <div className='catalogue'>
+                    
+                    <img alt='' src={success}/>
+                    <div className='date'><p>01-11-2023</p></div>
+                    <div className='name'><p>NIVETHITHA & MANOJ KUMAR </p></div>
+                    <p id="read" onClick={Read}>{readmore}</p>
+                </div>
+            </div>
+            <div className="footer">
+                <div className='footer-head'>
+                    
+                    <img alt='' src={info}></img>
+                    <p>This Website is Strictly for Matrimonial Purpose only and not a Dating Website and should not be used for posting obscene material. </p>
+                </div>
+                <div className='foot-bg'>
+                    <div className='footer-body'>
+                        <div className='col-img'>
+                            <p>Sriangalammanmatrimony</p>
+                            <div className='foot-img-img'>
+                                <img alt='' src={footerimg}/>
+                            </div>
+                        </div>
+                        <div className='col-contact'>
+                            <p id='p'>Get in <span>Contact</span></p>
+                            <p id='p1'>If you have any questions about the services we provide simply use the form below. We try and respond to all queries and comments within 24 hours.</p>
+                            <h6>Book Appoinment</h6>
+                            <div className='email'>
+                                <input type='email' placeholder='Enter your email'></input>
+                                <button type='submit'>Submit</button>
+                            </div>
+                            <div className='row'>
+                                <div className='col'>
+                                    <p><i class="fas fa-phone pr-1"></i>9629891299 </p>
+                                    <p><i class="far fa-envelope-open pr-1"></i> info@sriangalammanmatrimony.com </p>
+                                </div>
+                                <div className='col'>
+                                    <p>FAQ</p>
+                                    <p>Terms & Condition</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className='footer-tail'>
+                            <p>sriangalammanmatrimony.com Matrimony - muthaliyar matrimony , matrimony service in erode , coimbatore , tirupur, salem, all caste.</p>
+                            <div className='row'>
+                                <i id="i1" class="fab fa-facebook-f icon-border facebook rounded-circle"></i>
+                                <i id="i2" class="fab fa-telegram icon-border rss rounded-circle"></i>
+                                <i id="i3" class="fab fa-twitter icon-border twitter rounded-circle"></i>
+                                <i id="i4" class="fas fa-rss icon-border rss rounded-circle"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
 
     </div>
     )
