@@ -1,43 +1,23 @@
 import './Home.css';
 import './Home_media.css'
-import logo from './Assets/logo.png';
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+
 import welcome from './Assets/welcome.png';
 import underline from './Assets/underline.png'
 import success from './Assets/success.jpeg'
-import info from './Assets/info.png'
-import p1 from './Assets/p1.jpg'
 import backToTop from './Assets/backToTop.png'
-import footerimg from './Assets/footerimage.jpeg'
+import p1 from './Assets/p1.jpg'
 import { useState,useEffect } from "react";
 
 
 
 function Home() {
-    const [dropdown,setdrop] = useState(false);
-    const [menu , setmenu] = useState(false);
-    const [active, setactive] = useState(1);
-    const [readmore,setreadmore] = useState('Read more')
-    const [scroll,setscroll] = useState(true)
-
-    function About_dropdown(){
-
-        if(dropdown===false){
-            setdrop(true);
-        }
-        else{
-            setdrop(false)
-        }
-    }
     
+    const [readmore,setreadmore] = useState('Read more')
+    const [scroll,setscroll] = useState(false)
 
-    function menubar(){
-        if(menu===false){
-            setmenu(true);
-        }
-        else{
-            setmenu(false)
-        }
-    }
 
 
     function Read(){
@@ -48,29 +28,30 @@ function Home() {
             setreadmore("Read more")
         }
     }
-      const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setscroll(true);
-      console.log("scroll",scroll)
-    } else {
-      setscroll(true);
-    }
-  };
 
-  const scrollToTop = () => {
+    const toggleVisibility = () => {
+    if (window.pageYOffset > 400) {
+        setscroll(true)
+    } else {
+        setscroll(false)
+    }
+     };
+
+     function scrollToTop (){
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+      useEffect(() => {
+          window.addEventListener('scroll', toggleVisibility);
     
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
+         return () => {
+              window.removeEventListener('scroll', toggleVisibility);
+         };
+     }, []);
+
 
     
 
@@ -84,170 +65,9 @@ function Home() {
 
     return(
         <div className="home">
-            <div className="header">
-                <div className="logo">
-                    <img src={logo} alt="logo"/>
-                </div>
-                <div className="headercontact">
-                    <div className="env">
-                        <i class="far fa-envelope-open text-center mr-md-4 mr-sm-2 mr-8"></i>
-                    </div>
-                    <div>
-                        <h3>+919443946541</h3>
-                        <h2>info@sriangalammanmatrimony.com</h2>
-                    </div>
-                </div>
-                <div className="headerbuttons">
-                    <button>Login</button>
-                    <button>Register</button>
-                </div>
-            </div>
+            <Header />
             
-
-            <div className="navbar">
-                <div onClick={() => setactive(1)} style={{color: [1].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <h4 >Home</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(2)} style={{color: [2].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <h4 onClick={About_dropdown} >About Us▼</h4>
-                    <div style={{display: dropdown ? 'block' : 'none'}} className="dropdown">
-                        <div>
-                            <i class="fa fa-retweet"></i>
-                            <h4>FAQs</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-check"></i>
-                            <h4>Terms & Conditions</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-user-secret"></i>
-                            <h4>Privacy Policy</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-credit-card"></i>
-                            <h4>Refund Policy </h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-exclamation-triangle"></i>
-                            <h4>Disclaimer</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-ban"></i>
-                            <h4>Report Misuse</h4>
-                        </div> 
-                            <hr/>
-                        <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
-                            <i class="fa fa-user"></i>
-                            <h4> About Us</h4>
-                        </div>     
-                    </div>
-                    
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(3)} style={{color: [3].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-share" aria-hidden="true"></i>
-                    <h4>Sign UP</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(4)} style={{color: [4].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <h4>Search</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(5)} style={{color: [5].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
-                    <h4>Membership</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(6)} style={{color: [6].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                    <h4>Success Story</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(7)} style={{color: [7].includes(active)? 'black': 'white'}} className="navitems">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <h4>Contact Us</h4>
-                </div>
-            </div>
-
-            <div className="Tab-nav">
-                <i id="bar" onClick={menubar} class="fa-solid fa-bars"></i>            
-            </div>
-
-
-            <div style={{display: menu ? 'flex' : 'none'}} onClick={() => dropdown && About_dropdown()} className="second-navbar">
-                <div onClick={() => setactive(1)} style={{color: [1].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <h4>Home</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(2)} style={{color: [2].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <h4 onClick={About_dropdown}>About Us▼</h4>
-                    <div style={{display: dropdown ? 'block' : 'none'}} className="dropdown">
-                        <div>
-                            <i class="fa fa-retweet"></i>
-                            <h4>FAQs</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-check"></i>
-                            <h4>Terms & Conditions</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-user-secret"></i>
-                            <h4>Privacy Policy</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-credit-card"></i>
-                            <h4>Refund Policy </h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-exclamation-triangle"></i>
-                            <h4>Disclaimer</h4>
-                        </div> 
-                        <div>
-                            <i class="fa fa-ban"></i>
-                            <h4>Report Misuse</h4>
-                        </div> 
-                            <hr/>
-                        <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
-                            <i class="fa fa-user"></i>
-                            <h4> About Us</h4>
-                        </div>     
-                    </div>
-                    
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(3)} style={{color: [3].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-share" aria-hidden="true"></i>
-                    <h4>Sign UP</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(4)} style={{color: [4].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <h4>Search</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(5)} style={{color: [5].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
-                    <h4>Membership</h4>
-                </div>
-                <p>|</p>
-                <div  onClick={() => setactive(6)} style={{color: [6].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                    <h4>Success Story</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(7)} style={{color: [7].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <h4>Contact Us</h4>
-                </div>
-            </div>
-            
-            <img className='backToTop' alt='' style={{display: scroll ? 'block' : 'none'}} src={backToTop}/>
+            <img onClick={scrollToTop} className='backToTop' alt='' style={{display: scroll ? 'block' : 'none'}} src={backToTop}/>
 
             <div className="carousel"><div ></div></div>
 
@@ -317,8 +137,9 @@ function Home() {
             <div className="welcome">
                     <div className="text">
                         <h1>Welcome to Sriangalamman Matrimony</h1>
-                        <p><b>Sriangalamman Matrimony,</b> is one of India’s leading online premium matrimonial websites which will help thousands of all Community members find their perfect life partner. <br /><p></p>Sriangalamman Matrimony  is the most trusted matrimony service for thousands who are in search of life partners in India & Worldwide.</p>
-                        <p style={{display:'inline'}}>...<p style={{color:'#489bffff',display:'inline'}}>Read More</p></p>
+                        <p><b>Sriangalamman Matrimony,</b> is one of India’s leading online premium matrimonial websites which will help thousands of all Community members find their perfect life partner. </p><br />
+                        <p>Sriangalamman Matrimony  is the most trusted matrimony service for thousands who are in search of life partners in India & Worldwide.</p>
+                        <h6 style={{display:'inline'}}>...<p style={{color:'#489bffff',display:'inline'}}>Read More</p></h6>
                     </div>
                     <div className="img">
                         <img alt="welcome" src={welcome}/>
@@ -389,7 +210,7 @@ function Home() {
             </div>
 
             
-            <div className="features">
+            <div className="features" >
                 <div className="f-text">
                     <p id="h3">Features & <b>Policy</b> </p>
                     <img alt="" className="underline" src={underline}/>
@@ -397,7 +218,7 @@ function Home() {
                 <div className='row1'>
                     <div className='row'>
                             <div className='column'>
-                                <i class="fa-solid fa-comments"></i>
+                                <i className="fa-solid fa-comments"></i>
                             </div>
                             <div className='column1'>
                                 <h1 id="zero" style={{padding:'0',margin:'0'}}>Free SMS & Chat</h1>
@@ -407,7 +228,7 @@ function Home() {
                             </div>
                         </div><div className='row'>
                             <div className='column'>
-                                <i class="fas fa-book"></i>
+                                <i className="fas fa-book"></i>
                             </div>
                             <div className='column1'>
                                 <h1 id="zero" style={{padding:'0',margin:'0'}}>Auto Match Maker</h1>
@@ -416,7 +237,7 @@ function Home() {
                             </div>
                         </div><div className='row'>
                             <div className='column'>
-                                <i class="fas fa-users"></i>
+                                <i className="fas fa-users"></i>
                             </div>
                             <div className='column1'>
                                 <h1 id="zero" style={{padding:'0',margin:'0'}}>Recommend Profile</h1>
@@ -427,7 +248,7 @@ function Home() {
                 </div><div className='row1'>
                     <div className='row'>
                             <div className='column'>
-                                <i class="far fa-calendar-alt"></i>
+                                <i className="far fa-calendar-alt"></i>
                             </div>
                             <div className='column1'>
                                 <h1 id="zero" style={{padding:'0',margin:'0'}}>Notification Alerts </h1>
@@ -437,7 +258,7 @@ function Home() {
                             </div>
                         </div><div className='row'>
                             <div className='column'>
-                                <i class="fa fa-cog"></i>
+                                <i className="fa fa-cog"></i>
                             </div>
                             <div className='column1'>
                                 <h1 id="zero" style={{padding:'0',margin:'0'}}>Restrictions Setting</h1>
@@ -446,7 +267,7 @@ function Home() {
                             </div>
                         </div><div className='row'>
                             <div className='column'>
-                                <i class="far fa-clock"></i>
+                                <i className="far fa-clock"></i>
                             </div>
                             <div className='column1'>
                                 <h1 id="zero" style={{padding:'0',margin:'0'}}>Privacy Policy</h1>
@@ -471,52 +292,9 @@ function Home() {
                     <p id="read" onClick={Read}>{readmore}</p>
                 </div>
             </div>
-            <div className="footer">
-                <div className='footer-head'>
-                    
-                    <img alt='' src={info}></img>
-                    <p>This Website is Strictly for Matrimonial Purpose only and not a Dating Website and should not be used for posting obscene material. </p>
-                </div>
-                <div className='foot-bg'>
-                    <div className='footer-body'>
-                        <div className='col-img'>
-                            <p>Sriangalammanmatrimony</p>
-                            <div className='foot-img-img'>
-                                <img alt='' src={footerimg}/>
-                            </div>
-                        </div>
-                        <div className='col-contact'>
-                            <p id='p'>Get in <span>Contact</span></p>
-                            <p id='p1'>If you have any questions about the services we provide simply use the form below. We try and respond to all queries and comments within 24 hours.</p>
-                            <h6>Book Appoinment</h6>
-                            <div className='email'>
-                                <input type='email' placeholder='Enter your email'></input>
-                                <button type='submit'>Submit</button>
-                            </div>
-                            <div className='row'>
-                                <div className='col'>
-                                    <p><i class="fas fa-phone pr-1"></i>9629891299 </p>
-                                    <p><i class="far fa-envelope-open pr-1"></i> info@sriangalammanmatrimony.com </p>
-                                </div>
-                                <div className='col'>
-                                    <p>FAQ</p>
-                                    <p>Terms & Condition</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className='footer-tail'>
-                            <p>sriangalammanmatrimony.com Matrimony - muthaliyar matrimony , matrimony service in erode , coimbatore , tirupur, salem, all caste.</p>
-                            <div className='row'>
-                                <i id="i1" class="fab fa-facebook-f icon-border facebook rounded-circle"></i>
-                                <i id="i2" class="fab fa-telegram icon-border rss rounded-circle"></i>
-                                <i id="i3" class="fab fa-twitter icon-border twitter rounded-circle"></i>
-                                <i id="i4" class="fas fa-rss icon-border rss rounded-circle"></i>
-                            </div>
-                    </div>
-                </div>
-            </div>
+            
+
+            <Footer />
 
     </div>
     )
