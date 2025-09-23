@@ -1,0 +1,6 @@
+.border{
+    background: url('../Assets/border.png');
+    background-repeat: repeat-x;
+    height: 23px;
+    width: 100%;
+}

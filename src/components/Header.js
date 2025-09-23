@@ -1,12 +1,11 @@
 import './Header.css'
 import logo from '../Assets/logo.png';
 import { useState } from "react";
-import { Link ,useNavigate ,useLocation} from 'react-router-dom'; 
+import { Link, useNavigate ,useLocation} from 'react-router-dom'; 
 
 function Header(){
     const [dropdown,setdrop] = useState(false);
     const [menu , setmenu] = useState(false);
-    const [active, setactive] = useState('Home');
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -33,7 +32,6 @@ function Header(){
 
     function Navigate(event){
         var page = event.target.textContent
-        console.log(page,'|',active ,'|',location)
         if(page === "Home"){
             navigate('/')
             
@@ -56,25 +54,18 @@ function Header(){
             
         }else if(page === "FAQs"){
             navigate('/FAQs')
-            setactive('about')
         }else if(page === "Terms & Conditions"){
             navigate('/terms&conditions')
-            setactive('about')
         }else if(page === "Privacy Policy"){
             navigate('/privacy-policy')
-            setactive('about')
         }else if(page === "Refund Policy"){
             navigate('/refund-policy')
-            setactive('about')
         }else if(page === "Disclaimer"){
             navigate('/disclaimer')
-            setactive('about')
         }else if(page === "Report Misuse"){
             navigate('/report')
-            setactive('about')
         }else if(page === "About Us"){
             navigate('/about')
-            setactive('about')
         }
     }
     
@@ -83,7 +74,7 @@ function Header(){
         <div>
             <div className="header">
                 <div className="logo">
-                    <img src={logo} alt="logo"/>
+                   <Link to='/'><img  src={logo} alt="logo"/></Link> 
                 </div>
                 <div className="headercontact">
                     <div className="env">

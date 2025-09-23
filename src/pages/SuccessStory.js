@@ -1,11 +1,14 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Success from '../components/Success';
+import Border from '../components/Border';
 
 function SuccessStory(){
     return(
         <div>
             <Header />
-            <h1>SuccessStory</h1>
+            <Border />
+            <Success />
             <Footer />
         </div>
     )
