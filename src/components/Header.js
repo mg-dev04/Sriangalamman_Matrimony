@@ -1,11 +1,15 @@
 import './Header.css'
 import logo from '../Assets/logo.png';
 import { useState } from "react";
+import { Link ,useNavigate ,useLocation} from 'react-router-dom'; 
 
 function Header(){
     const [dropdown,setdrop] = useState(false);
     const [menu , setmenu] = useState(false);
-    const [active, setactive] = useState(1);
+    const [active, setactive] = useState('Home');
+    const navigate = useNavigate();
+    const location = useLocation();
+
 
     function About_dropdown(){
 
@@ -26,6 +30,54 @@ function Header(){
             setmenu(false)
         }
     }
+
+    function Navigate(event){
+        var page = event.target.textContent
+        console.log(page,'|',active ,'|',location)
+        if(page === "Home"){
+            navigate('/')
+            
+        }
+        else if(page === "Sign UP"){
+            
+            navigate('/sign-up')
+            
+        }else if(page === "Search"){
+            navigate('/search')
+            
+        }else if(page === "Membership"){
+            navigate('/membership')
+            
+        }else if(page === "Success Story"){
+            navigate('/success-story')
+            
+        }else if(page === "Contact Us"){
+            navigate('/contact-us')
+            
+        }else if(page === "FAQs"){
+            navigate('/FAQs')
+            setactive('about')
+        }else if(page === "Terms & Conditions"){
+            navigate('/terms&conditions')
+            setactive('about')
+        }else if(page === "Privacy Policy"){
+            navigate('/privacy-policy')
+            setactive('about')
+        }else if(page === "Refund Policy"){
+            navigate('/refund-policy')
+            setactive('about')
+        }else if(page === "Disclaimer"){
+            navigate('/disclaimer')
+            setactive('about')
+        }else if(page === "Report Misuse"){
+            navigate('/report')
+            setactive('about')
+        }else if(page === "About Us"){
+            navigate('/about')
+            setactive('about')
+        }
+    }
+    
     
     return(
         <div>
@@ -48,150 +100,154 @@ function Header(){
                 </div>
             </div>
             
-
-            <div className="navbar">
-                <div onClick={() => setactive(1)} style={{color: [1].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-home" aria-hidden="true"></i>
-                    <h4 >Home</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(2)} style={{color: [2].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-user" aria-hidden="true"></i>
-                    <h4 onClick={About_dropdown} >About Us▼</h4>
-                    <div style={{display: dropdown ? 'block' : 'none'}} className="dropdown">
-                        <div>
-                            <i className="fa fa-retweet"></i>
-                            <h4>FAQs</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-check"></i>
-                            <h4>Terms & Conditions</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-user-secret"></i>
-                            <h4>Privacy Policy</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-credit-card"></i>
-                            <h4>Refund Policy </h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-exclamation-triangle"></i>
-                            <h4>Disclaimer</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-ban"></i>
-                            <h4>Report Misuse</h4>
-                        </div> 
-                            <hr/>
-                        <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
-                            <i className="fa fa-user"></i>
-                            <h4> About Us</h4>
-                        </div>     
-                    </div>
+           
+                <div className="navbar">
                     
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(3)} style={{color: [3].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-share" aria-hidden="true"></i>
-                    <h4>Sign UP</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(4)} style={{color: [4].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                    <h4>Search</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(5)} style={{color: [5].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-tags" aria-hidden="true"></i>
-                    <h4>Membership</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(6)} style={{color: [6].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-heart" aria-hidden="true"></i>
-                    <h4>Success Story</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(7)} style={{color: [7].includes(active)? 'black': 'white'}} className="navitems">
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    <h4>Contact Us</h4>
-                </div>
-            </div>
-
-            <div className="Tab-nav">
-                <i id="bar" onClick={menubar} className="fa-solid fa-bars"></i>            
-            </div>
-
-
-            <div style={{display: menu ? 'flex' : 'none'}} onClick={() => dropdown && About_dropdown()} className="second-navbar">
-                <div onClick={() => setactive(1)} style={{color: [1].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-home" aria-hidden="true"></i>
-                    <h4>Home</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(2)} style={{color: [2].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-user" aria-hidden="true"></i>
-                    <h4 onClick={About_dropdown}>About Us▼</h4>
-                    <div style={{display: dropdown ? 'block' : 'none'}} className="dropdown">
-                        <div>
-                            <i className="fa fa-retweet"></i>
-                            <h4>FAQs</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-check"></i>
-                            <h4>Terms & Conditions</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-user-secret"></i>
-                            <h4>Privacy Policy</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-credit-card"></i>
-                            <h4>Refund Policy </h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-exclamation-triangle"></i>
-                            <h4>Disclaimer</h4>
-                        </div> 
-                        <div>
-                            <i className="fa fa-ban"></i>
-                            <h4>Report Misuse</h4>
-                        </div> 
-                            <hr/>
-                        <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
-                            <i className="fa fa-user"></i>
-                            <h4> About Us</h4>
-                        </div>     
+                    <div onClick={Navigate} style={{color: location.pathname ==="/" ? 'black' : 'white'}} className="navitems">
+                        <i className="fa fa-home" aria-hidden="true"></i>
+                        <h4>Home</h4>
                     </div>
-                    
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(3)} style={{color: [3].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-share" aria-hidden="true"></i>
-                    <h4>Sign UP</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(4)} style={{color: [4].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                    <h4>Search</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(5)} style={{color: [5].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-tags" aria-hidden="true"></i>
-                    <h4>Membership</h4>
-                </div>
-                <p>|</p>
-                <div  onClick={() => setactive(6)} style={{color: [6].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-heart" aria-hidden="true"></i>
-                    <h4>Success Story</h4>
-                </div>
-                <p>|</p>
-                <div onClick={() => setactive(7)} style={{color: [7].includes(active)? 'black': 'white'}} className="second-navitems">
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    <h4>Contact Us</h4>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: (location.pathname === "/FAQs" ||location.pathname === "/terms&conditions" ||location.pathname === "/privacy-policy" ||location.pathname === "/refund-policy" ||location.pathname === "/disclaimer" ||location.pathname === "/report" || location.pathname ==="/about"  ) ? 'black' : 'white'}} className="navitems">
+                        <i className="fa fa-user" aria-hidden="true"></i>
+                        <h4 onClick={About_dropdown} >About Us▼</h4>
+                        
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/sign-up" ? 'black' : 'white'}}  className="navitems">
+                        <i className="fa fa-share" aria-hidden="true"></i>
+                        <h4>Sign UP</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/search" ? 'black' : 'white'}} className="navitems">
+                        <i className="fa fa-search" aria-hidden="true"></i>
+                        <h4>Search</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/membership" ? 'black' : 'white'}} className="navitems">
+                        <i className="fa fa-tags" aria-hidden="true"></i>
+                        <h4>Membership</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/success-story" ? 'black' : 'white'}} className="navitems">
+                        <i className="fa fa-heart" aria-hidden="true"></i>
+                        <h4>Success Story</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate}  style={{color: location.pathname ==="/contact-us" ? 'black' : 'white'}}className="navitems">
+                        <i className="fa fa-map-marker" aria-hidden="true"></i>
+                        <h4>Contact Us</h4>
+                    </div>
                 </div>
 
-            </div>
+                <div className="Tab-nav">
+                    <i id="bar" onClick={menubar} className="fa-solid fa-bars"></i>            
+                </div>
+
+
+                <div style={{display: menu ? 'flex' : 'none'}} onClick={() => dropdown && About_dropdown()} className="second-navbar">
+                    <div onClick={Navigate} style={{color: location.pathname ==="/" ? 'black' : 'white'}} className="second-navitems">
+                        <i className="fa fa-home" aria-hidden="true"></i>
+                        <h4>Home</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: (location.pathname === "/FAQs" ||location.pathname === "/terms&conditions" ||location.pathname === "/privacy-policy" ||location.pathname === "/refund-policy" ||location.pathname === "/disclaimer" ||location.pathname === "/report" || location.pathname ==="/about"  ) ? 'black' : 'white'}}  className="second-navitems">
+                        <i className="fa fa-user" aria-hidden="true"></i>
+                        <h4 onClick={About_dropdown}>About Us▼</h4>
+                        <div style={{display: dropdown ? 'block' : 'none'}} className="dropdown">
+                            <center>
+                                <div >
+                                    <i className="fa fa-retweet"></i>
+                                    <h4 onClick={Navigate}>FAQs</h4>
+                                </div> 
+                                <div>
+                                    <i className="fa fa-check"></i>
+                                    <h4 onClick={Navigate}>Terms & Conditions</h4>
+                                </div> 
+                                <div>
+                                    <i className="fa fa-user-secret"></i>
+                                    <h4 onClick={Navigate}>Privacy Policy</h4>
+                                </div> 
+                                <div>
+                                    <i className="fa fa-credit-card"></i>
+                                    <h4 onClick={Navigate}>Refund Policy</h4>
+                                </div> 
+                                <div>
+                                    <i className="fa fa-exclamation-triangle"></i>
+                                    <h4 onClick={Navigate}>Disclaimer</h4>
+                                </div> 
+                                <div>
+                                    <i className="fa fa-ban"></i>
+                                    <h4 onClick={Navigate}>Report Misuse</h4>
+                                </div> 
+                                    <hr/>
+                                <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
+                                    <i className="fa fa-user"></i>
+                                    <h4 onClick={Navigate}>About Us</h4>
+                                </div>     
+                                </center>
+                        </div>
+                        
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/sign-up" ? 'black' : 'white'}} className="second-navitems">
+                        <i className="fa fa-share" aria-hidden="true"></i>
+                        <h4>Sign UP</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/search" ? 'black' : 'white'}} className="second-navitems">
+                        <i className="fa fa-search" aria-hidden="true"></i>
+                        <h4>Search</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/membership" ? 'black' : 'white'}} className="second-navitems">
+                        <i className="fa fa-tags" aria-hidden="true"></i>
+                        <h4>Membership</h4>
+                    </div>
+                    <p>|</p>
+                    <div  onClick={Navigate} style={{color: location.pathname ==="/success-story" ? 'black' : 'white'}} className="second-navitems">
+                        <i className="fa fa-heart" aria-hidden="true"></i>
+                        <h4>Success Story</h4>
+                    </div>
+                    <p>|</p>
+                    <div onClick={Navigate} style={{color: location.pathname ==="/contact-us" ? 'black' : 'white'}}  className="second-navitems">
+                        <i className="fa fa-map-marker" aria-hidden="true"></i>
+                        <h4>Contact Us</h4>
+                    </div>
+
+                </div>
+                
+                <div id='desk-drop' style={{display: dropdown ? 'block' : 'none'}} className="dropdown">
+                            <div>
+                                <i className="fa fa-retweet"></i>
+                                <h4 onClick={Navigate}>FAQs</h4>
+                            </div> 
+                            <div>
+                                <i className="fa fa-check"></i>
+                                <h4 onClick={Navigate}>Terms & Conditions</h4>
+                            </div> 
+                            <div>
+                                <i className="fa fa-user-secret"></i>
+                                <h4 onClick={Navigate}>Privacy Policy</h4>
+                            </div> 
+                            <div>
+                                <i className="fa fa-credit-card"></i>
+                                <h4 onClick={Navigate}>Refund Policy</h4>
+                            </div> 
+                            <div>
+                                <i className="fa fa-exclamation-triangle"></i>
+                                <h4 onClick={Navigate}>Disclaimer</h4>
+                            </div> 
+                            <div>
+                                <i className="fa fa-ban"></i>
+                                <h4 onClick={Navigate}>Report Misuse</h4>
+                            </div> 
+                                <hr/>
+                            <div style={{paddingBottom:"10px",marginBottom:"5px"}}>
+                                <i className="fa fa-user"></i>
+                                <h4 onClick={Navigate}>About Us</h4>
+                            </div>     
+                        </div>
         </div>
     );
     
