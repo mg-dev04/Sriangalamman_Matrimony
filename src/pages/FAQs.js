@@ -66,9 +66,9 @@ function FAQs(){
                     Paid Matrimonial Members can express interest and write messages to other members of sriangalammanmatrimony.com
 
 </p>
-                <h1>How can I upgrade my paid membership ?</h1>
+                <h1>11.How can I upgrade my paid membership ?</h1>
                 <p>We provide various options for upgrading your membership. You can login to your matrimony account page and click upgrade button. Choose the right package for you, which will lead you to the payment page. You will be provided with various options for payment.</p>
-                <h1> How do I contact customer care ?</h1>
+                <h1>12.How do I contact customer care ?</h1>
                 <p>sriangalammanmatrimony.com is eager to help you find your partner at the earliest. Customer Support is top priority to us. You can contact our customer care team in any of the following ways listed here.</p>
                
                 

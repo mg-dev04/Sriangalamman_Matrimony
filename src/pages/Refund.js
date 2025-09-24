@@ -1,11 +1,17 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Border from '../components/Border'
+import Heading from '../components/Heading'
 
 function Refund(){
     return(
         <div>
             <Header />
-            <h1>Refund</h1>
+            <Border />
+            <Heading text={"Returns and Cancellation "}/>
+            <div className='container'>
+                <p>We do not entertain Return, Refund and Cancellation in any Circumstances.</p>
+            </div>
             <Footer />
         </div>
     )

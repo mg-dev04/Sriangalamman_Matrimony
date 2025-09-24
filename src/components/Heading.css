@@ -11,11 +11,15 @@
 .heading p{
     font-weight: 100;
     font-size: 36px;
-    padding: 0;
+    line-height: 38px;
+    padding: 5px;
     margin: 0;
     color: #c30332;
     font-style: normal;
     font-family: 'Roboto Condensed',sans-serif;
+}
+.heading b{
+    font-weight: 700;
 }
 .heading .underline{
     width: 180px;
