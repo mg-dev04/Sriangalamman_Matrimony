@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Border from '../components/Border'
 import Heading from '../components/Heading'
+import './About.css'
 
 function Refund(){
     return(

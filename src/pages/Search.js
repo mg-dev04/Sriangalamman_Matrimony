@@ -17,10 +17,7 @@ function Search(){
 
     const tAge = Iterate(18,65);
 
-    const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
+    
 
     const status =[
         "Unmarried",
@@ -50,88 +47,64 @@ function Search(){
         "chettiyar",
         "Mudaliar"
         ]
-    const countrycode =[
-            "(+91) India",
-            "(+1) United States",
-            "(+44) United Kingdom",
-            "(+86) China",
-            "(+61) Australia",
-            "(+81) Japan",
-            "(+49) Germany",
-            "(+33) France",
-            "(+7) Russia",
-            "(+55) Brazil",
-            "(+52) Mexico",
-            "(+62) Indonesia",
-            "(+82) South Korea",
-            "(+92) Pakistan",
-            "(+234) Nigeria",
-            "(+20) Egypt",
-            "(+880) Bangladesh",
-            "(+39) Italy",
-            "(+34) Spain",
-            "(+27) South Africa"
-            ]
-
-    console.log();
-
-    const years = Iterate(new Date().getFullYear() -50, new Date().getFullYear() -18);
+    
+        
 
     return(
         <div>
             <Header />
             <div className='main'>
                 <Heading bold={"Regular Search"}  color={true}/>
-                <div className='form'>
+                <div className='search-form'>
                     <form>
-                        <div style={{flexDirection:"column"}} className='row'>
+                        <div style={{flexDirection:"column"}} className='search-row'>
                             <label>Gender</label>
                                 <select name='ProfileBy' required>
                                     <option name="select" selected disabled>Select</option>
                                     <option name="Self" >Male</option>
                                     <option name="Father" >Female</option>
                             </select>
-                        </div><div className='row'>
-                            <div className='column'>
+                        </div><div className='search-row'>
+                            <div className='search-column'>
                                 <label>Select From Age</label>
-                                <select multiple name='fage'>
+                                <select  name='fage'>
                                     <option selected disabled> Select From Age</option>
                                     {fAge.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='search-column'>
                                 <label>Select To Age</label>
-                                <select multiple name='tage'>
+                                <select  name='tage'>
                                     <option  selected disabled> Select To Age</option>
-                                    {fAge.map((d) => <option name={d} >{d}</option>)}
+                                    {tAge.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                        </div><div style={{flexDirection:'column'}} className='row'>
+                        </div><div style={{flexDirection:'column'}} className='search-row'>
                                 <label>Maritial Status</label>
-                                <select multiple name='Status'>
+                                <select id='select'  multiple name='Status'>
                                     <option name="select" selected disabled>Select</option>
                                     {status.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             
-                        </div><div className='row'>
-                            <div className='column'>
+                        </div><div className='search-row'>
+                            <div className='search-column'>
                                <label>Religion</label>
-                                <select multiple name='Religion'>
+                                <select id='select'  multiple name='Religion'>
                                     <option name="select" selected disabled>Select</option>
                                     {religion.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='search-column'>
                                 <label>Caste</label>
-                                <select multiple name='Caste'>
+                                <select id='select'  multiple name='Caste'>
                                     <option name="select" selected disabled>Select</option>
                                     {caste.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                        </div><div style={{marginBottom:"0"}} className='row'>
-                            <div className='column'>
+                        </div><div style={{marginBottom:"0"}} className='search-row'>
+                            <div className='search-column'>
                                 <label>Select Education</label>
-                                <select multiple name='Education'>
+                                <select id='select'  multiple name='Education'>
                                     <option value="------------------------PG-Professional Courses------------------------" disabled>
                                         ------------------------PG-Professional Courses------------------------
                                     </option>
@@ -253,9 +226,9 @@ function Search(){
 
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='search-column'>
                                 <label>Select Occupation</label>
-                            <select multiple name='Occupation'>
+                            <select id='select'  multiple name='Occupation'>
                                 <option value="Advertising/ Entertainment/ Media">Advertising/ Entertainment/ Media</option>
                                 <option value="Agriculture">Agriculture</option>
                                 <option value="Architecture &amp; Design">Architecture &amp; Design</option>
@@ -301,23 +274,23 @@ function Search(){
 
                             </div>
                         </div>
-                        <div className='row1'>
-                            <div className='column1'>
+                        <div className='search-row1'>
+                            <div className='search-column1'>
                                 <div style={{flexDirection:"row"}} className='Any'>
-                                    <input type="checkbox" name="Education" value="any" />
+                                    <input id='input' type="checkbox" name="Education" value="any" />
                                     <h5>Any</h5>
                                 </div>
-                                <p>Please use Ctrl+ for multiple selection</p>
-                            </div><div id="hide" className='column1'>
+                                <p style={{margin:'0',padding:'0'}}>Please use Ctrl+ for multiple selection</p>
+                            </div><div id="hide" className='search-column1'>
                                 <div style={{flexDirection:"row"}} className='Any'>
-                                    <input type="checkbox" name="Occupation" value="any" />
+                                    <input id='input' type="checkbox" name="Occupation" value="any" />
                                     <h5>Any</h5>
                                 </div>
-                                <p>Please use Ctrl+ for multiple selection</p>
+                                <p style={{margin:'0',padding:'0'}}>Please use Ctrl+ for multiple selection</p>
                             </div>
                         </div>
                         <div  style={{marginBottom:"25px"}} className='Any'>
-                            <input className='photo' type="checkbox" name="photo" value={true} />
+                            <input id='input' className='photo' type="checkbox" name="photo" value={true} />
                             <h5>With Photo</h5>
                         </div>
                         <button className='submit' type='submit' name='Submit'>Submit</button>

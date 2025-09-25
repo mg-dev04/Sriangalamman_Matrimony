@@ -80,28 +80,28 @@ function SignUp(){
             <Header />
             <div className='main'>
                 <Heading bold={"Free Signup"}  color={true}/>
-                <div className='form'>
+                <div className='sign-form'>
                     <form>
-                        <div className='row'>
-                            <div className='column'>
+                        <div className='sign-row'>
+                            <div className='sign-column'>
                                 <label>First Name</label>
                                 <input placeholder='First Name' name='FirstName' type='text' required/>
                             </div>
-                            <div className='column'>
+                            <div className='sign-column'>
                                 <label>Surname</label>
                                 <input placeholder='Surname' name='Surename' type='text' required/>
                             </div>
-                        </div><div className='row'>
-                            <div className='column'>
+                        </div><div className='sign-row'>
+                            <div className='sign-column'>
                                 <label>Email</label>
                                 <input placeholder='E-mail' name='Email' type='text' required/>
                             </div>
-                            <div className='column'>
+                            <div className='sign-column'>
                                 <label>Set Password</label>
                                 <input placeholder='Set Password' name='SetPasword' type='text' required/>
                             </div>
-                        </div><div className='row'>
-                            <div className='column'>
+                        </div><div className='sign-row'>
+                            <div className='sign-column'>
                                 <label>Matrimony Profile By</label>
                                 <select name='ProfileBy' required>
                                     <option name="select" selected disabled>Select</option>
@@ -116,7 +116,7 @@ function SignUp(){
                                     <option name="others" >others</option>
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='sign-column'>
                                 <label>Gender</label>
                                 <select name='ProfileBy' required>
                                     <option name="select" selected disabled>Select</option>
@@ -124,74 +124,74 @@ function SignUp(){
                                     <option name="Father" >Female</option>
                                 </select>
                             </div>
-                        </div><div className='row'>
-                            <div style={{width:'32%'}} className='column'>
+                        </div><div className='sign-row'>
+                            <div style={{width:'32%'}} className='sign-column'>
                                 <label>Date of Birth</label>
                                 <select name='day'>
                                     <option name="select" selected disabled>Select Day</option>
                                     {days.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div style={{width:'32%'}} className='column'>
+                            <div style={{width:'32%'}} className='sign-column'>
                                 <label>Month</label>
                                 <select name='Month'>
                                     <option name="select" selected disabled>Select Month</option>
                                     {months.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div style={{width:'32%'}} className='column'>
+                            <div style={{width:'32%'}} className='sign-column'>
                                 <label>Year</label>
                                 <select name='Year'>
                                     <option name="select" selected disabled>Select Year</option>
                                     {years.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                        </div><div className='row'>
-                            <div className='column'>
+                        </div><div className='sign-row'>
+                            <div className='sign-column'>
                                 <label>Maritial Status</label>
                                 <select name='Status'>
                                     <option name="select" selected disabled>Select</option>
                                     {status.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='sign-column'>
                                 <label>Religion</label>
                                 <select name='Religion'>
                                     <option name="select" selected disabled>Select</option>
                                     {religion.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                        </div><div className='row'>
-                            <div className='column'>
+                        </div><div className='sign-row'>
+                            <div className='sign-column'>
                                 <label>Caste</label>
                                 <select name='Caste'>
                                     <option name="select" selected disabled>Select</option>
                                     {caste.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='sign-column'>
                                 <label>Enter Subcaste</label>
                                 <input placeholder='Enter Subcaste' name="Subcaste" type='text' required/>
                             </div>
                         </div>
-                        <div className='row'>
-                            <div className='column'>
+                        <div className='sign-row'>
+                            <div className='sign-column'>
                                 <label>Country code</label>
                                 <select name='code'>
                                     <option name="select" selected disabled>Select</option>
                                     {countrycode.map((d) => <option name={d} >{d}</option>)}
                                 </select>
                             </div>
-                            <div className='column'>
+                            <div className='sign-column'>
                                 <label>Mobile Number</label>
                                 <input placeholder='Enter Mobile Number' name='ph' type='text' required/>
                             </div>
                         </div>
-                        <div className='textarea'>
+                        <div className='sign-textarea'>
                             <label> Enter Few Lines About Yourself</label>
                             <textarea name='about' type='textarea'></textarea>
                         </div>
-                        <div className='row'>
+                        <div className='sign-row'>
                             <div class='agree'>
                                 <input type='checkbox' required/>
                                 <p> I agree to the terms of service</p>
