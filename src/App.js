@@ -15,6 +15,7 @@ import Refund from './pages/Refund'
 import Disclaimer from './pages/Disclaimer'
 import Report from './pages/Report'
 import Login from './pages/Login'
+import Forget from './pages/Forget'
 
 
 
@@ -38,6 +39,7 @@ function App(){
                 <Route path='/report' element={<Report/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/login' element={<Login/>}/>
+                <Route path='/forget-password' element={<Forget/>}/>
 
 
 

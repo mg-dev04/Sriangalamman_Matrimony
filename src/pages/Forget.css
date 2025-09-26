@@ -1,16 +1,17 @@
-.loginpage{
+.forgotpage{
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url('../Assets/login-bg.jpg') ;
     background-size: cover;
-    height: 90vh;
+    height: 50vh;
     padding: 0;
     margin: 0;
 }
-.login__column{
+.forgot__column{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: white;
     max-width: 40vw;
     min-width: 400px;
@@ -20,39 +21,34 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.login__column--child{
+.forgot__column--child{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.login__column--child label{
+.forgot__column--child label{
     color: #c30332;
     font-weight: 700;
     padding-left: 10px;
 }
-.login__column--child input{
+.forgot__column--child input{
     background-color: white;
     border: 1px solid black ;
     border-radius: 4px;
 }
-.login__column--child i{
+.forgot__column--child i{
     color: rgb(67, 174, 255);
 }
-.login__row{
+.forgot__row{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0;
 }
-.login__row p{
-    color: #c30332;
-    font-weight: 500;
-    text-align:right;
-    padding-right: 10px;
-}
-.login__button{
+
+.forgot__button{
     background : linear-gradient(to right, #ff840a, #c30332);
-    width: 100%;
+    width: 50%;
     height: 50px;
     font-size: 18px;
     color: white;
@@ -62,23 +58,14 @@
     cursor: pointer;
     font-weight: 700;
 }
-.login__row p:hover{
+.forgot__row p:hover{
     cursor: pointer;
     color: rgb(84, 84, 84);
     transition: 0.5s;
 }
 @media screen and (max-width:1216px){
-    .loginpage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url('../Assets/login-bg.jpg') ;
-    background-size: cover;
-    height: 90vh;
-    padding: 0;
-    margin: 0;
-}
-.login__column{
+    
+.forgot__column{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -90,37 +77,37 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.login__column--child{
+.forgot__column--child{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.login__column--child label{
+.forgot__column--child label{
     color: #c30332;
     font-weight: 700;
     padding-left: 10px;
 }
-.login__column--child input{
+.forgot__column--child input{
     background-color: white;
     border: 1px solid black ;
     border-radius: 4px;
 }
-.login__column--child i{
+.forgot__column--child i{
     color: rgb(67, 174, 255);
 }
-.login__row{
+.forgot__row{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin: 0;
 }
-.login__row p{
+.forgot__row p{
     color: #c30332;
     font-weight: 500;
     text-align:right;
     padding-right: 10px;
 }
-.login__button{
+.forgot__button{
     background : linear-gradient(to right, #ff840a, #c30332);
     width: 100%;
     height: 50px;
@@ -135,17 +122,8 @@
 }
 
 @media screen and (max-width:865px){
-    .loginpage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url('../Assets/login-bg.jpg') ;
-    background-size: cover;
-    height: 90vh;
-    padding: 0;
-    margin: 0;
-}
-.login__column{
+    
+.forgot__column{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -157,38 +135,38 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.login__column--child{
+.forgot__column--child{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.login__column--child label{
+.forgot__column--child label{
     color: #c30332;
     font-weight: 700;
     padding-left: 10px;
 }
-.login__column--child input{
+.forgot__column--child input{
     background-color: white;
     border: 1px solid black ;
     border-radius: 4px;
 }
-.login__column--child i{
+.forgot__column--child i{
     color: rgb(67, 174, 255);
 }
-.login__row{
+.forgot__row{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin: 0;
 }
-.login__row p{
+.forgot__row p{
     color: #c30332;
     font-weight: 500;
     font-size: 13px;
     text-align:right;
     padding-right: 10px;
 }
-.login__button{
+.forgot__button{
     background : linear-gradient(to right, #ff840a, #c30332);
     width: 100%;
     height: 50px;
@@ -203,7 +181,7 @@
 }
 
 @media screen and (max-width:480px){
-    .login__column{
+    .forgot__column{
     display: flex;
     flex-direction: column;
     background-color: white;

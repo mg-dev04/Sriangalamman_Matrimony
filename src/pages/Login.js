@@ -20,7 +20,7 @@ function Login() {
                                 <input type="email" placeholder="Username" required/>
                             </div>
                             <div className="login__row">
-                                <p>Forgotten Password?</p>
+                                <Link  to='/forget-password' style={{textDecoration:"none"}}><p>Forgotten Password?</p></Link>
                             </div>
                             <div className="login__row">
                                 <button className="login__button" type="submit">Login</button>
