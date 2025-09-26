@@ -14,6 +14,7 @@ import Privacy from './pages/Privacy'
 import Refund from './pages/Refund'
 import Disclaimer from './pages/Disclaimer'
 import Report from './pages/Report'
+import Login from './pages/Login'
 
 
 
@@ -36,6 +37,7 @@ function App(){
                 <Route path='/disclaimer' element={<Disclaimer/>}/>
                 <Route path='/report' element={<Report/>}/>
                 <Route path='/about' element={<About/>}/>
+                <Route path='/login' element={<Login/>}/>
 
 
 

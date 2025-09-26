@@ -86,8 +86,8 @@ function Header(){
                     </div>
                 </div>
                 <div className="headerbuttons">
-                    <button>Login</button>
-                    <button>Register</button>
+                    <Link to='/login'><button>Login</button></Link>
+                    <Link to='/sign-up'><button>Register</button></Link>
                 </div>
             </div>
             

@@ -1,0 +1,213 @@
+.loginpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../Assets/login-bg.jpg') ;
+    background-size: cover;
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+}
+.login__column{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 40vw;
+    min-width: 400px;
+    margin: 2vw 28% 0 28%;
+    gap: 20px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.login__column--child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login__column--child label{
+    color: #c30332;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.login__column--child input{
+    background-color: white;
+    border: 1px solid black ;
+    border-radius: 4px;
+}
+.login__column--child i{
+    color: rgb(67, 174, 255);
+}
+.login__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+.login__row p{
+    color: #c30332;
+    font-weight: 500;
+    text-align:right;
+    padding-right: 10px;
+}
+.login__button{
+    background : linear-gradient(to right, #ff840a, #c30332);
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+@media screen and (max-width:1216px){
+    .loginpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../Assets/login-bg.jpg') ;
+    background-size: cover;
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+}
+.login__column{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 40vw;
+    min-width: 400px;
+    margin: 2vw 20% 0 24%;
+    gap: 20px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.login__column--child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login__column--child label{
+    color: #c30332;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.login__column--child input{
+    background-color: white;
+    border: 1px solid black ;
+    border-radius: 4px;
+}
+.login__column--child i{
+    color: rgb(67, 174, 255);
+}
+.login__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+.login__row p{
+    color: #c30332;
+    font-weight: 500;
+    text-align:right;
+    padding-right: 10px;
+}
+.login__button{
+    background : linear-gradient(to right, #ff840a, #c30332);
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+}
+
+@media screen and (max-width:865px){
+    .loginpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../Assets/login-bg.jpg') ;
+    background-size: cover;
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+}
+.login__column{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 40vw;
+    min-width: 160px;
+    margin: 2vw 22% 0 22%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.login__column--child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login__column--child label{
+    color: #c30332;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.login__column--child input{
+    background-color: white;
+    border: 1px solid black ;
+    border-radius: 4px;
+}
+.login__column--child i{
+    color: rgb(67, 174, 255);
+}
+.login__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+.login__row p{
+    color: #c30332;
+    font-weight: 500;
+    font-size: 13px;
+    text-align:right;
+    padding-right: 10px;
+}
+.login__button{
+    background : linear-gradient(to right, #ff840a, #c30332);
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+}
+
+@media screen and (max-width:480px){
+    .login__column{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 250px;
+    min-width: 60vw;
+    margin: 2vw 15% 0 15%;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+}
